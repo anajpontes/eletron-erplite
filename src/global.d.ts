@@ -8,6 +8,7 @@ declare global {
         user: User;
         session: Session;
       }>;
+      products(): Promise<Product[]>;
     };
   }
 }

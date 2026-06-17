@@ -1,3 +1,4 @@
+import { ProductsService } from '../modules/stock/services/products.service';
 import { supabase } from './supabase';
 
 export class AuthService {

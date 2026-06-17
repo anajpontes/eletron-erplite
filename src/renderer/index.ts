@@ -3,6 +3,9 @@ import './index.css';
 const form = document.querySelector<HTMLFormElement>('#login-form');
 
 if (form) {
+  const products = await window.api.products();
+  console.log('Products:', products);
+
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
 

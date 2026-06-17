@@ -7,4 +7,7 @@ contextBridge.exposeInMainWorld('api', {
   login: (email: string, password: string) => {
     return ipcRenderer.invoke('auth:login', email, password);
   },
+  products: () => {
+    return ipcRenderer.invoke('products:list');
+  },
 });
