@@ -1,14 +1,9 @@
-import { error } from 'node:console';
 import { ProductsService } from '../services/products.service';
 import { CreateProductDto } from '../dtos/create-product.dto';
 import { UpdateProductDto } from '../dtos/update-product.dto';
 
 export class ProductsController {
   constructor(private productsService: ProductsService) {}
-
-  index() {
-    return this.productsService.listProducts();
-  }
 
   list(){
     return this.productsService.listProducts();

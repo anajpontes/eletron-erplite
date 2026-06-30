@@ -18,7 +18,12 @@ describe('ProductsController', () => {
   });
 
   it('deve retornar a lista de produtos', async () => {
-    const result = await controller.index();
+    const result = await controller.list();
     expect(result).toEqual([{ id: 1, name: 'Teste' }]);
   });
+});
+
+it('deve buscar um produto pelo id', async () => {
+  const result = await controller.find('1');
+  expect(result).toEqual({id: 1, name: 'Teste'});
 });
